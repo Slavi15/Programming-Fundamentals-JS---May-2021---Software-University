@@ -1,13 +1,12 @@
 function bombNumbers(arr1, arr2) {
-    let specialNumber = Number(arr2[0]);
-    let distance = Number(arr2[1]);
+    let index = arr1.indexOf(arr2[0]);
 
-    for(let i = 0; i < arr1.length; i++) {
-        if(arr1[i] == specialNumber) {
-            let startIndex = Math.max(0, i - distance);
-            arr1.splice(startIndex, (distance * 2 + 1));
-        }
-    }
+    while (index > -1) {
+      let start = Math.max(index - arr2[1], 0);
+      arr1.splice(index, arr2[1]+1);
+      arr1.splice(start, arr2[1]);
+      index = arr1.indexOf(arr2[0]);
+    }    
 
     let sum = 0;
     for(let i = 0; i < arr1.length; i++) {
