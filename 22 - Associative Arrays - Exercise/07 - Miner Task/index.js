@@ -8,12 +8,12 @@ function minerTask(arr) {
             map.set(arr[i], Number(arr[i + 1]));
         }
         i += 1;
-    }
+    };
 
     for(let kvp of map) {
         console.log(`${kvp[0]} -> ${kvp[1]}`);
-    }
-}
+    };
+};
 
 minerTask([
     'Gold',

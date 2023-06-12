@@ -6,12 +6,12 @@ function companyUsers(arr) {
 
         if(!Object.keys(companies).includes(company)) {
             companies[company] = [];
-        }
+        };
 
         if(companies[company].includes(id) === false) {
             companies[company].push(id);
-        }
-    }
+        };
+    };
 
     let sorted = Object.entries(companies).sort((a, b) => a[0].localeCompare(b[0]));
     
@@ -19,9 +19,9 @@ function companyUsers(arr) {
         console.log(company);
         for(let i of id) {
             console.log(`-- ${i}`);
-        }
-    }
-}
+        };
+    };
+};
 
 companyUsers([
     'SoftUni -> AA12345',
