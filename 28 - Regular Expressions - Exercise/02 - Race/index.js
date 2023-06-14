@@ -24,10 +24,10 @@ function raceFunction(arr) {
                 map.set(name, {
                     total: total
                 });
-            }
-        }
+            };
+        };
         total = 0;
-    }
+    };
 
     let sorted = new Map([...map.entries()].sort((a, b) => b[1].total - a[1].total));
     let count = 0;
@@ -41,9 +41,9 @@ function raceFunction(arr) {
             console.log(`3rd place: ${kvp[0]}`);
         } else {
             break;
-        }
-    }
-}
+        };
+    };
+};
 
 raceFunction(["George, Peter, Bill, Tom",
     "G4e@55or%6g6!68e!!@",

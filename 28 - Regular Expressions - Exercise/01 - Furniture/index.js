@@ -6,7 +6,7 @@ function furnitureFunction(arr) {
     for(let line of arr) {
         if(line === 'Purchase') {
             break;
-        }
+        };
 
         let match = regex.exec(line);
         if(match !== null) {
@@ -18,15 +18,15 @@ function furnitureFunction(arr) {
             qty = Number(qty);
             total += price * qty;
             array.push(name);
-        }
-    }
+        };
+    };
 
     console.log('Bought furniture:');
     for(let item of array) {
         console.log(item);
     };
     console.log(`Total money spend: ${total.toFixed(2)}`);
-}
+};
 
 furnitureFunction([">>Sofa<<312.23!3",
     ">>TV<<300!5",
